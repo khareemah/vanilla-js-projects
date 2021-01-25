@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  background: url("./hero.jpeg") no-repeat center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container {
+  max-width: 1170px;
+  padding: 20px;
+  margin: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(73, 166, 233, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  z-index: -10;
+}
+.modal-overlay.open-modal {
+  visibility: visible;
+  z-index: 1;
+}
+.modal {
+  width: 90vw;
+  max-width: 600px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+}
+.modal-btn {
+  padding: 6px 18px;
+  border: none;
+  background-color: #49a6e9;
+  border: 2px solid #49a6e9;
+  transition: 0.5s ease all;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.modal-btn:hover {
+  background-color: white;
+  color: #49a6e9;
+}
+.modal h1 {
+  text-align: center;
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+.modal-content {
+  position: relative;
+  border-radius: 5px;
+  height: 250px;
+  width: 90vw;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+.modal-overlay.open-modal .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modal-content h2 {
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+.modal-content .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 20px;
+  font-size: 28px;
+  font-weight: 800;
+  color: hsl(360, 67%, 44%);
+  border: none;
+  background-color: transparent;
+  transition: 0.5s ease all;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s linear all;
+}
+.modal-content .close-btn:hover {
+  transform: scale(1.3);
+}
