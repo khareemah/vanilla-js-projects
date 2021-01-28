@@ -59,8 +59,6 @@ h2.section-title {
 .question-card.show-answer .answer {
   display: block;
 }
-/* .question.show-answer .answer {
-} */
 .question-card .answer p {
   border-top: 1px solid hsl(212, 21%, 62%);
   color: hsl(210, 22%, 49%);
