@@ -49,20 +49,21 @@ section.menu .row {
 
 /* buttons */
 .btn-container {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 .btn-container .btn {
-  border: 3px outset #c59d5f;
   background-color: transparent;
-  padding: 5px 10px;
+  border: none;
+  padding: 5px;
   color: #c59d5f;
-  font-size: 16px;
+  font-size: 14px;
   font-family: inherit;
   text-transform: capitalize;
   letter-spacing: 1px;
-  margin: 10px;
-  font-weight: 700;
+  margin-bottom: 10px;
+  margin-right: 5px;
   transition: 0.3s ease all;
 }
 .btn-container .btn:hover,
