@@ -18,7 +18,7 @@ const projects = [
   {
     url: "./4. navbar/index.html",
     img: "./img/navbar.PNG",
-    title: "navbar"
+    title: "Navbar"
   },
   {
     url: "./5. sidebar/index.html",
