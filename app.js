@@ -34,6 +34,11 @@ const projects = [
     url: "./7. questions/index.html",
     img: "./img/questions.PNG",
     title: "questions"
+  },
+  {
+    url: "./8. menu/index.html",
+    img: "./img/menu.PNG",
+    title: "menu"
   }
 ];
 

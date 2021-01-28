@@ -111,10 +111,12 @@ function displayMenuBtn() {
     ...new Set(menu.map(({ category }) => category))
   ];
   const btnContainer = document.querySelector(".btn-container");
-  const filterBtns = allCategories.map(
-    category =>
-      `<button class="btn" data-category="${category}">${category}</button>`
-  );
+  const filterBtns = allCategories.map(category => {
+    if (category === "all") {
+      return `<button class="btn active" data-category="${category}">${category}</button>`;
+    }
+    return `<button class="btn" data-category="${category}">${category}</button>`;
+  });
   btnContainer.innerHTML = filterBtns.join("");
 
   const btns = document.querySelectorAll(".btn-container .btn");
