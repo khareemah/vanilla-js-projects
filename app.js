@@ -41,7 +41,7 @@ const projects = [
     title: "menu"
   },
   {
-    url: "./9. menu/index.html",
+    url: "./9. video/index.html",
     img: "./img/video.PNG",
     title: "video"
   }
