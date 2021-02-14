@@ -44,6 +44,21 @@ const projects = [
     url: "./9. video/index.html",
     img: "./img/video.PNG",
     title: "video"
+  },
+  {
+    url: "./11. tabs/index.html",
+    img: "./img/tabs.PNG",
+    title: "tabs"
+  },
+  {
+    url: "./12. countdown timer/index.html",
+    img: "./img/countdown.PNG",
+    title: "countdown"
+  },
+  {
+    url: "./13. lorem ipsum/index.html",
+    img: "./img/lorem ipsum.PNG",
+    title: "lorem ipsum"
   }
 ];
 

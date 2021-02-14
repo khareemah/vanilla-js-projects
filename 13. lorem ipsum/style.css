@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(210, 36%, 96%);
+  color: hsl(209, 61%, 16%);
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+main {
+  text-align: center;
+}
+h2 {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-size: 27px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+p :not(article p) {
+  letter-spacing: 2px;
+  line-height: 20px;
+  font-size: 20px;
+}
+input {
+  border: 2px solid hsl(209, 61%, 16%);
+  background-color: transparent;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+.btn {
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  background-color: hsl(209, 61%, 16%);
+  color: white;
+}
+.lorem {
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+}
+.lorem p {
+  margin-bottom: 30px;
+  line-height: 24px;
+  color: hsl(209, 66%, 50%);
+}

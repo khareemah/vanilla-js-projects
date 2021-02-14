@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(210, 36%, 96%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+section.give-away {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 20px 40px;
+}
+section.give-away article {
+  flex: 1;
+  padding: 25px;
+}
+section.give-away article.image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+section.give-away article.text h1 {
+  color: hsl(205, 72%, 37%);
+  font-size: 25px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+section.give-away article.text h3.message,
+.countdown h3.alert {
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #111;
+  padding-bottom: 20px;
+}
+section.give-away article.text p {
+  line-height: 24px;
+  font-size: 17px;
+  color: hsl(205, 60%, 46%);
+  padding-bottom: 25px;
+}
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+}
+.countdown div {
+  flex: 1;
+  text-align: center;
+  background-color: hsl(205, 90%, 12%);
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+.countdown div h3 {
+  font-size: 36px;
+  padding: 0;
+  margin: 0;
+}
+.countdown div span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding-bottom: 10px;
+  display: inline-block;
+  font-weight: 600;
+}
+@media (max-width: 992px) {
+  section.give-away {
+    flex-direction: column;
+  }
+}
