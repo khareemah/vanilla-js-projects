@@ -46,6 +46,11 @@ const projects = [
     title: "video"
   },
   {
+    url: "./10. scroll/index.html",
+    img: "./img/scroll.PNG",
+    title: "scroll"
+  },
+  {
     url: "./11. tabs/index.html",
     img: "./img/tabs.PNG",
     title: "tabs"

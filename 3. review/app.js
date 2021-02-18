@@ -49,15 +49,19 @@ const randomBtn = document.querySelector(".random-btn");
 let currentlySelected = 0;
 
 // load intial image
-window.addEventListener("DOMContentLoaded", showPerson);
+window.addEventListener("DOMContentLoaded", function() {
+  showPerson();
+});
 
 // prev, next and random person
 prevBtn.addEventListener("click", function() {
-  prevItem();
+  currentlySelected--;
+  checkNumber();
   showPerson();
 });
 nextBtn.addEventListener("click", function() {
-  nextItem();
+  currentlySelected++;
+  checkNumber();
   showPerson();
 });
 randomBtn.addEventListener("click", showRandomPerson);
@@ -70,19 +74,24 @@ function showPerson() {
   jobTitle.textContent = job;
   author.textContent = name;
   review.textContent = text;
-  console.log(image.alt);
 }
-function nextItem() {
-  currentlySelected++;
-  if (currentlySelected == reviews.length) currentlySelected = 0;
+function checkNumber() {
+  if (currentlySelected < 0) {
+    currentlySelected = reviews.length - 1;
+    return currentlySelected;
+  } else if (currentlySelected == reviews.length) {
+    currentlySelected = 0;
+    return currentlySelected;
+  }
+  return currentlySelected;
 }
-function prevItem() {
-  if (currentlySelected == 0) currentlySelected = reviews.length;
-  currentlySelected--;
-}
+
 function showRandomPerson() {
   let randomNumber = Math.floor(Math.random() * reviews.length);
-  console.log(randomNumber, currentlySelected);
+  if (randomNumber == currentlySelected) {
+    randomNumber--;
+  }
   currentlySelected = randomNumber;
+  checkNumber();
   showPerson();
 }
