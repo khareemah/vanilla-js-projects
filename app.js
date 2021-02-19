@@ -64,6 +64,11 @@ const projects = [
     url: "./13. lorem ipsum/index.html",
     img: "./img/lorem ipsum.PNG",
     title: "lorem ipsum"
+  },
+  {
+    url: "./15. slider/index.html",
+    img: "./img/slider.PNG",
+    title: "slider"
   }
 ];
 
