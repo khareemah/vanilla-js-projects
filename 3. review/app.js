@@ -67,6 +67,16 @@ nextBtn.addEventListener("click", function() {
 randomBtn.addEventListener("click", showRandomPerson);
 
 // function definitions
+function showRandomPerson() {
+  let randomNumber = Math.floor(Math.random() * reviews.length);
+  if (randomNumber == currentlySelected) {
+    randomNumber--;
+  }
+  currentlySelected = randomNumber;
+  checkNumber();
+  showPerson();
+}
+
 function showPerson() {
   let { name, job, img, text } = reviews[currentlySelected];
   image.src = img;
@@ -78,20 +88,8 @@ function showPerson() {
 function checkNumber() {
   if (currentlySelected < 0) {
     currentlySelected = reviews.length - 1;
-    return currentlySelected;
-  } else if (currentlySelected == reviews.length) {
+  }
+  if (currentlySelected == reviews.length) {
     currentlySelected = 0;
-    return currentlySelected;
   }
-  return currentlySelected;
-}
-
-function showRandomPerson() {
-  let randomNumber = Math.floor(Math.random() * reviews.length);
-  if (randomNumber == currentlySelected) {
-    randomNumber--;
-  }
-  currentlySelected = randomNumber;
-  checkNumber();
-  showPerson();
 }
