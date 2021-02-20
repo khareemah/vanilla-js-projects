@@ -84,15 +84,13 @@ main {
   align-items: center;
   justify-content: center;
   background-color: white;
-  /* transform: translateY(-100%);
+  transform: translateY(-100%);
   opacity: 0;
-  transition: 0.3s ease all; */
-  display: none;
+  transition: 0.3s ease all;
 }
 .modal-overlay.open-modal .modal-content {
-  /* transform: translateY(0);
-  opacity: 1; */
-  display: flex;
+  transform: translateY(0);
+  opacity: 1;
 }
 .modal-content h2 {
   font-size: 30px;
