@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(210, 36%, 96%);
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.grocery-container {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 20px;
+  border-radius: 5px;
+  padding: 25px;
+}
+p.alert {
+  margin: 10px;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: 0.7rem;
+  border-radius: 0.25rem;
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+}
+p.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+p.alert-success {
+  color: #155724;
+  background: #d4edda;
+}
+.grocery-form h3 {
+  color: hsl(205, 86%, 17%);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+}
+.form-field {
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+input.grocery {
+  width: 100%;
+  padding: 7px 18px;
+  border: none;
+  background-color: hsl(210, 36%, 96%);
+  color: hsl(210, 22%, 49%);
+  font-size: 17px;
+  border-radius: 5px 0 0 5px;
+}
+.submit-btn {
+  border: none;
+  padding: 7px 18px;
+  border-radius: 0 5px 5px 0;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  background-color: hsl(205, 86%, 81%);
+  cursor: pointer;
+}
+.grocery-list {
+  padding: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.5s ease all;
+  border-radius: 5px;
+}
+.grocery-list:hover {
+  background-color: hsl(210, 36%, 96%);
+}
+.grocery-list:hover p {
+  color: hsl(210, 22%, 49%);
+}
+.grocery-list p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: hsl(209, 61%, 16%);
+}
+.clear-btn {
+  display: block;
+  text-align: center;
+  border: none;
+  padding: 5px 8px;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  letter-spacing: 3px;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin: 15px auto 0;
+  color: hsl(360, 71%, 66%);
+  transition: 0.5s ease all;
+}
+.clear-btn:hover {
+  color: hsl(360, 67%, 44%);
+}

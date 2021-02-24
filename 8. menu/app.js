@@ -83,58 +83,57 @@ const menu = [
 const menuRow = document.querySelector("section.menu .row");
 window.addEventListener("DOMContentLoaded", function() {
   displayMenuItems(menu);
-  displayMenuBtn();
+  filterButtons();
 });
 
 function displayMenuItems(menuItems) {
-  let display = menuItems.map(({ title, price, img, desc, category }) => {
+  let displayMenu = menuItems.map(({ title, category, price, img, desc }) => {
     return ` <article class="menu-item">
-              <div class="image">
-                <img src="${img}" alt="${title}" />
-              </div>
-              <div class="text">
-                <header>
-                  <h4 class="title">${title}</h4>
-                  <h4 class="price">$${price}</h4>
-                </header>
-                <p class="description">
-                ${desc}
-              </div>
-            </article>`;
+            <div class="image">
+              <img src=${img} alt=${category} />
+            </div>
+            <div class="text">
+              <header>
+                <h4 class="title">${title}</h4>
+                <h4 class="price">$${price}</h4>
+              </header>
+              <p class="description">
+         ${desc}
+              </p>
+            </div>
+          </article>`;
   });
-  menuRow.innerHTML = display.join("");
+  menuRow.innerHTML = displayMenu.join("");
 }
-
-function displayMenuBtn() {
-  const allCategories = [
-    "all",
-    ...new Set(menu.map(({ category }) => category))
-  ];
-  const btnContainer = document.querySelector(".btn-container");
-  const filterBtns = allCategories.map(category => {
-    if (category === "all") {
-      return `<button class="btn active" data-category="${category}">${category}</button>`;
+const btnContainer = document.querySelector(".btn-container");
+function filterButtons() {
+  const categories = ["all", ...new Set(menu.map(item => item.category))];
+  const filterButtons = categories.map(category => {
+    if (category == "all") {
+      return `<button class="btn active" data-category=${category}>${category}</button>`;
     }
-    return `<button class="btn" data-category="${category}">${category}</button>`;
+    return `<button class="btn" data-category=${category}>${category}</button>`;
   });
-  btnContainer.innerHTML = filterBtns.join("");
+  const btnContainer = document.querySelector(".btn-container");
 
-  const btns = document.querySelectorAll(".btn-container .btn");
+  btnContainer.innerHTML = filterButtons.join("");
+
+  const btns = btnContainer.querySelectorAll(".btn");
   btns.forEach(btn => {
     btn.addEventListener("click", function() {
-      btns.forEach(menuBtn => {
-        menuBtn.classList.remove("active");
-        this.classList.add("active");
-      });
-      const menuCategory = btn.dataset.category;
-      const filterMenu = menu.filter(
-        ({ category }) => menuCategory === category
-      );
-      if (menuCategory == "all") {
+      const target = btn.getAttribute("data-category");
+      const menuList = menu.filter(({ category }) => category === target);
+      if (target == "all") {
         displayMenuItems(menu);
       } else {
-        displayMenuItems(filterMenu);
+        displayMenuItems(menuList);
       }
+      btns.forEach(item => {
+        item.classList.remove("active");
+        if (btn == item) {
+          btn.classList.add("active");
+        }
+      });
     });
   });
 }

@@ -20,11 +20,11 @@ function generateText() {
     const randomNumber = Math.floor(Math.random() * text.length);
     article.innerHTML = `<p>${text[randomNumber]}</p>`;
   } else {
-    let res = "";
-    for (let i = 0; i < value; i++) {
-      res += `<p>${text[i]}</p>`;
-    }
-    article.innerHTML = res;
+    const paragraphs = text.slice(0, value);
+    const res = paragraphs.map(paragraph => `<p>${paragraph}</p>`);
+    // for (let i = 0; i < value; i++) {
+    //   res += `<p>${text[i]}</p>`;
+    // }
+    article.innerHTML = res.join("");
   }
 }
-console.log("hello World");

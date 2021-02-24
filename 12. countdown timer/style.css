@@ -14,7 +14,6 @@ body {
 }
 section.give-away {
   display: flex;
-  flex-wrap: wrap;
   padding: 60px 20px 40px;
 }
 section.give-away article {
@@ -42,6 +41,9 @@ section.give-away article.text h3.message,
   color: #111;
   padding-bottom: 20px;
 }
+.countdown h3.alert {
+  color: #ab0b0b;
+}
 section.give-away article.text p {
   line-height: 24px;
   font-size: 17px;
@@ -50,19 +52,22 @@ section.give-away article.text p {
 }
 .countdown {
   display: flex;
+  border: 2px solid red;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .countdown div {
-  flex: 1;
+  width: 23%;
   text-align: center;
   background-color: hsl(205, 90%, 12%);
-  margin: 10px;
+  margin: 1%;
   color: white;
   padding: 10px;
 }
 .countdown div h3 {
   font-size: 36px;
   padding: 0;
+  color: white;
   margin: 0;
 }
 .countdown div span {
@@ -76,5 +81,8 @@ section.give-away article.text p {
 @media (max-width: 992px) {
   section.give-away {
     flex-direction: column;
+  }
+  .countdown div {
+    width: 43%;
   }
 }

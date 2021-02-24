@@ -136,7 +136,7 @@ section.home::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.6));
   z-index: -1;
 }
 section.home .home-text {
